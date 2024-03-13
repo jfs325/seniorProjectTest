@@ -9,7 +9,22 @@
       "UnauthRoleName": "amplify-seniorprojecttest-dev-0450d-unauthRole",
       "StackName": "amplify-seniorprojecttest-dev-0450d",
       "StackId": "arn:aws:cloudformation:us-east-1:010116010920:stack/amplify-seniorprojecttest-dev-0450d/065ddc80-e172-11ee-91bd-0e138533c7c3",
-      "AmplifyAppId": "d2br157ve5u6w4"
+      "AmplifyAppId": "d2br157ve5u6w4",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-seniorprojecttest-dev-0450d-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "brewerAuth": {}
+      },
+      "function": {
+        "brewerAuthCustomMessage": {
+          "REDIRECTURL": "https://main.d2br157ve5u6w4.amplifyapp.com/",
+          "EMAILSUBJECT": "Action Required: Confirm Your Drafted Account",
+          "EMAILMESSAGE": "Click on the link to confirm your Drafted Account",
+          "deploymentBucketName": "amplify-seniorprojecttest-dev-0450d-deployment",
+          "s3Key": "amplify-builds/brewerAuthCustomMessage-3967446e4c764a493449-build.zip"
+        }
+      }
     }
   }
 }

@@ -1,1 +1,96 @@
-{}
+{
+  "auth": {
+    "brewerAuth": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "brewerAuthCustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ],
+          "passwordPolicyMinLength": "9"
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER",
+          "PICTURE",
+          "WEBSITE"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "brewerAuthCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_brewerAuthCustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "brewerAuthCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_brewerAuthCustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "brewerAuthCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_brewerAuthCustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "brewerAuthCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_brewerAuthCustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "brewerAuthCustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_brewerAuthCustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "brewerAuthCustomMessage"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "resourceNameTruncated": "senior6f240f27",
+    "userPoolName": "brewerAuthUserPool",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Please Verify your Email for Drafted",
+    "emailVerificationMessage": "Your Drafted Verification Code is {####}",
+    "defaultPasswordPolicy": true,
+    "passwordPolicyMinLength": "9",
+    "passwordPolicyCharacters": [
+      "Requires Lowercase",
+      "Requires Numbers",
+      "Requires Symbols"
+    ],
+    "requiredAttributes": [
+      "email",
+      "phone_number",
+      "picture",
+      "website"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": "30",
+    "userpoolClientWriteAttributes": [
+      "email",
+      "phone_number",
+      "picture",
+      "website"
+    ],
+    "userpoolClientReadAttributes": [
+      "email",
+      "phone_number",
+      "picture",
+      "website"
+    ],
+    "userpoolClientLambdaRole": "brewer6f240f27_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "sharedId": "6f240f27",
+    "resourceName": "brewerAuth",
+    "authSelections": "userPoolOnly",
+    "useDefault": "manual",
+    "usernameAttributes": [
+      "email"
+    ],
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {
+      "CustomMessage": [
+        "verification-link"
+      ]
+    },
+    "hostedUI": true,
+    "hostedUIDomainName": "drafted-auth",
+    "authProvidersUserPool": [],
+    "hostedUIProviderMeta": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://www.drafted.com/auth/callback/\"],\"LogoutURLs\":[\"https://drafted.com/auth/signout/\"]}",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "verificationBucketName": "brewerauthverificationbucket",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}
